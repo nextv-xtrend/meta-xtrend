@@ -1,6 +1,7 @@
 require conf/machine/include/et.inc
 
-PREFERRED_PROVIDER_virtual/kernel = "linux-etxx00-2g"
+PREFERRED_PROVIDER_virtual/kernel = "linux-etxx00"
+PREFERRED_VERSION_linux-etxx00 = "4.10.6"
 
 PREFERRED_PROVIDER_virtual/blindscan-dvbc = "et-blindscan-dvbc-utils-${MACHINE}"
 
