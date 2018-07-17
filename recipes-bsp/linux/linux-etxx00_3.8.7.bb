@@ -2,6 +2,8 @@ DESCRIPTION = "Linux kernel for ${MACHINE}"
 SECTION = "kernel"
 LICENSE = "GPLv2"
 
+PACKAGE_ARCH = "${MACHINE_ARCH}"
+
 COMPATIBLE_MACHINE = "et[5,6,9]+"
 
 KERNEL_RELEASE = "3.8.7"
