@@ -25,6 +25,7 @@ SRC_URI += "http://www.et-view.com/img_up/shop_pds/bh190/Img_Xtrend/linux-${PV}.
 	file://defconfig \
 	file://0001-kernel-add-support-for-gcc-5.patch \
 	file://kernel-gcc6.patch \
+	file://kernel-gcc7.patch \
 	file://0001-Revert-default-authentication-needs-to-be-at-least-n.patch \
 	file://0001-Revert-MIPS-mm-Add-compound-tail-page-_mapcount-when.patch \
 	file://0001-Revert-MIPS-Add-fast-get_user_pages.patch \

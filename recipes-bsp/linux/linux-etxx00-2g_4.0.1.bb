@@ -35,6 +35,7 @@ SRC_URI += "http://www.et-view.com/img_up/shop_pds/bh190/Img_Xtrend/linux-${PV}.
 	file://bcmgenet_phyaddr.patch \
 	file://set_o32_default_fpu_flags.patch \
 	file://kernel-gcc6.patch \
+	file://kernel-gcc7.patch \
 	"
 
 inherit kernel machine_kernel_pr
