@@ -62,6 +62,8 @@ SRC_URI += "http://www.et-view.com/img_up/shop_pds/bh190/Img_Xtrend/linux-${PV}.
 	file://0001-stv090x-optimized-TS-sync-control.patch \
 	file://2-2-stv090x-on-tuning-lock-return-correct-tuned-paramaters-like-freq-sr-fec-rolloff-etc.patch \
 	file://0001-Support-TBS-USB-drivers.patch \
+	file://0002-mips-kernel-fpu-gcc7.patch \
+	file://0003-mips-kernel-ilog2-gcc7.patch \
 	"
 
 inherit kernel machine_kernel_pr
