@@ -21,7 +21,7 @@ PKG_kernel-image = "kernel-image"
 RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
-SRC_URI += "http://www.et-view.com/img_up/shop_pds/bh190/Img_Xtrend/linux-${PV}.tar.gz \
+SRC_URI += "https://www.dropbox.com/s/raw/n0loe2ds9void5w/linux-4.0.1.tar.gz \
 	file://defconfig \
 	file://add-dmx-source-timecode.patch \
 	file://iosched-slice_idle-1.patch \

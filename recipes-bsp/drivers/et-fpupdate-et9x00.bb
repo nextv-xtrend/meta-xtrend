@@ -1,5 +1,10 @@
 FPVERSION = "15"
 
+SRC_URI = " \
+	https://www.dropbox.com/s/raw/nl3iurzbmk398cy/fpupdate-1.0.zip \
+	https://www.dropbox.com/s/raw/y1pew700zcjlzqt/avrmain-et9x00-15.zip \
+	"
+
 require et-fpupdate-1.0.inc
 
 SRC_URI[avrmain.md5sum] = "56c1e74eaf019d57fa29e64bb7755023"

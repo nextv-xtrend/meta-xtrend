@@ -8,11 +8,6 @@ PR = "r5"
 
 PV = "${FPVERSION}"
 
-SRC_URI = " \
-	http://www.et-view.com/img_up/shop_pds/bh190/Img_Xtrend/fpupdate-${FPUPDATE}.zip \
-	http://www.et-view.com/img_up/shop_pds/bh190/Img_Xtrend/avrmain-${MACHINE}-${FPVERSION}.zip;name=avrmain \
-	"
-
 S = "${WORKDIR}"
 
 inherit update-rc.d

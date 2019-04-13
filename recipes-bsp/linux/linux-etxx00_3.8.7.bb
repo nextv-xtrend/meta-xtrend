@@ -21,7 +21,7 @@ PKG_kernel-image = "kernel-image"
 RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
-SRC_URI += "http://www.et-view.com/img_up/shop_pds/bh190/Img_Xtrend/linux-${PV}.tar.gz \
+SRC_URI += "https://www.dropbox.com/s/raw/4gx7piw3jzbh162/linux-3.8.7.tar.gz \
 	file://defconfig \
 	file://0001-kernel-add-support-for-gcc-5.patch \
 	file://kernel-gcc6.patch \

@@ -21,7 +21,7 @@ PKG_kernel-image = "kernel-image"
 RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
-SRC_URI += "http://www.et-view.com/img_up/shop_pds/bh190/Img_Xtrend/linux-${PV}.tar.gz \
+SRC_URI += "https://www.dropbox.com/s/raw/3b2nv82arzv4vtn/linux-3.13.8.tar.gz \
 	file://defconfig \
 	file://add-dmx-source-timecode.patch \
 	file://af9015-output-full-range-SNR.patch \

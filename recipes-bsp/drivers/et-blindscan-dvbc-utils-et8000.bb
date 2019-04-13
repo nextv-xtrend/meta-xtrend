@@ -5,7 +5,7 @@ LICENSE = "CLOSED"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-SRC_URI = "http://www.et-view.com/img_up/shop_pds/bh190/Img_Xtrend/${MACHINE}-dvbc-blindscan-${PV}.zip"
+SRC_URI = "https://www.dropbox.com/s/raw/cpx2tg7671xr0bx/et8000-dvbc-blindscan-1.2.zip"
 
 PROVIDES += "virtual/blindscan-dvbc"
 RPROVIDES_${PN} += "virtual/blindscan-dvbc"

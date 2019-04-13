@@ -3,7 +3,7 @@ SECTION = "base"
 PRIORITY = "optional"
 LICENSE = "CLOSED"
 
-SRC_URI = "http://www.et-view.com/img_up/shop_pds/bh190/Img_Xtrend/et-dvbs-blindscan-${PV}.zip"
+SRC_URI = "https://www.dropbox.com/s/raw/xjlrg09bvjp7q18/et-dvbs-blindscan-1.1.zip"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
