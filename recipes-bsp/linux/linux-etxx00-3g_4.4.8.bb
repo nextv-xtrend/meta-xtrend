@@ -20,7 +20,7 @@ MACHINE_KERNEL_PR_append = ".1"
 PKG_kernel-base = "kernel-base"
 PKG_kernel-image = "kernel-image"
 RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
-RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
+RPROVIDES_${KERNEL_PACKAGE_NAME}-image = "kernel-image-${KERNEL_VERSION}"
 
 SRC_URI += "https://www.dropbox.com/s/raw/xzb4snv7y0widzu/xtrend-linux-4.4.8-20160504.tar.xz \
 	file://defconfig \
@@ -32,6 +32,8 @@ SRC_URI += "https://www.dropbox.com/s/raw/xzb4snv7y0widzu/xtrend-linux-4.4.8-201
 	file://0001-STV-Add-PLS-support.patch \
 	file://0001-STV-Add-SNR-Signal-report-parameters.patch \
 	file://blindscan2.patch \
+	file://0002-log2-give-up-on-gcc-constant-optimizations.patch \
+	file://0003-dont-mark-register-as-const.patch \
 	"
 
 inherit kernel machine_kernel_pr
@@ -45,6 +47,8 @@ KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_IMAGEDEST = "/tmp"
 
 FILES_kernel-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}*"
+
+KERNEL_EXTRA_ARGS = "EXTRA_CFLAGS=-Wno-attribute-alias"
 
 kernel_do_install_append() {
 	${STRIP} ${D}${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-${KERNEL_VERSION}

@@ -26,6 +26,7 @@ SRC_URI += "https://www.dropbox.com/s/raw/4gx7piw3jzbh162/linux-3.8.7.tar.gz \
 	file://0001-kernel-add-support-for-gcc-5.patch \
 	file://kernel-gcc6.patch \
 	file://kernel-gcc7.patch \
+	file://kernel-gcc8.patch \
 	file://0001-Revert-default-authentication-needs-to-be-at-least-n.patch \
 	file://0001-Revert-MIPS-mm-Add-compound-tail-page-_mapcount-when.patch \
 	file://0001-Revert-MIPS-Add-fast-get_user_pages.patch \
