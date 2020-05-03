@@ -16,10 +16,10 @@ MACHINE_KERNEL_PR_append = ".13"
 # By default, kernel.bbclass modifies package names to allow multiple kernels
 # to be installed in parallel. We revert this change and rprovide the versioned
 # package names instead, to allow only one kernel to be installed.
-PKG_kernel-base = "kernel-base"
-PKG_kernel-image = "kernel-image"
-RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
-RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
+PKG_${KERNEL_PACKAGE_NAME}-base = "kernel-base"
+PKG_${KERNEL_PACKAGE_NAME}-image = "kernel-image"
+RPROVIDES_${KERNEL_PACKAGE_NAME}-base = "kernel-${KERNEL_VERSION}"
+RPROVIDES_${KERNEL_PACKAGE_NAME}-image = "kernel-image-${KERNEL_VERSION}"
 
 SRC_URI += "https://www.dropbox.com/s/raw/4gx7piw3jzbh162/linux-3.8.7.tar.gz \
 	file://defconfig \
@@ -27,6 +27,7 @@ SRC_URI += "https://www.dropbox.com/s/raw/4gx7piw3jzbh162/linux-3.8.7.tar.gz \
 	file://kernel-gcc6.patch \
 	file://kernel-gcc7.patch \
 	file://kernel-gcc8.patch \
+	file://kernel-gcc9.patch \
 	file://0001-Revert-default-authentication-needs-to-be-at-least-n.patch \
 	file://0001-Revert-MIPS-mm-Add-compound-tail-page-_mapcount-when.patch \
 	file://0001-Revert-MIPS-Add-fast-get_user_pages.patch \
@@ -65,6 +66,8 @@ SRC_URI += "https://www.dropbox.com/s/raw/4gx7piw3jzbh162/linux-3.8.7.tar.gz \
 	file://0001-Support-TBS-USB-drivers.patch \
 	file://0002-mips-kernel-fpu-gcc7.patch \
 	file://0003-mips-kernel-ilog2-gcc7.patch \
+	file://add-attributes-fix-modules-compile.patch \
+	file://makefile-silence-warnings.patch \
 	"
 
 inherit kernel machine_kernel_pr
@@ -77,7 +80,7 @@ KERNEL_OUTPUT = "vmlinux"
 KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_IMAGEDEST = "/tmp"
 
-FILES_kernel-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}*"
+FILES_${KERNEL_PACKAGE_NAME}-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}*"
 
 kernel_do_install_append() {
 	${STRIP} ${D}${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-${KERNEL_VERSION}
